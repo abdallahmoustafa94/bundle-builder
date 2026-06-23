@@ -21,7 +21,7 @@
 | [Tech stack](#tech-stack) | [Project structure](#project-structure) |
 | [Architecture](#architecture) | [Key concepts](#key-concepts) |
 | [Responsive layout](#responsive-layout) | [Testing & CI](#testing--ci) |
-| [Design decisions](#design-decisions) | [Roadmap](#roadmap) |
+| [Decisions & tradeoffs](#decisions--tradeoffs) | |
 
 ---
 
@@ -224,7 +224,7 @@ A **Vitest** suite (27 tests, `npm test`) covers the logic the UI depends on:
 
 ---
 
-## Design decisions
+## Decisions & tradeoffs
 
 | Topic | Decision |
 | --- | --- |
@@ -237,11 +237,3 @@ A **Vitest** suite (27 tests, `npm test`) covers the logic the UI depends on:
 | **Plan & shipping rows** | No stepper in review, matching the design. |
 | **Icons** | Presentation concern, not data. Step icons resolve from step `id` via `StepIcon`; SVGs in `src/assets/icons/` imported through `vite-plugin-svgr`. |
 | **Currency** | `Intl.NumberFormat` bound to `catalog.currency` via `formatPrice` on the bundle context. |
-
----
-
-## Roadmap
-
-- Real product imagery and the Figma's exact brand font
-- A toast system for checkout instead of the inline confirmation
-- Component/DOM tests (Testing Library) on top of the existing Vitest suite
