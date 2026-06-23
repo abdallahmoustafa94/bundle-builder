@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/catalog.js": {
+      "includeFiles": "server/catalog.json"
+    }
+  },
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
