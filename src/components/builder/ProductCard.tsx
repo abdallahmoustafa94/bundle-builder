@@ -28,16 +28,11 @@ export function ProductCard({ product }: { product: Product }) {
       }}
       transition={{ borderColor: { duration: 0.2 } }}
       className={cn(
-        'flex h-full flex-col overflow-clip rounded-[10px] border-2 bg-white p-[11px] gap-[10px] wide:h-[331px] xl:h-full xl:flex-row',
+        'flex h-full flex-row items-start overflow-clip rounded-[10px] border-2 bg-white p-[11px] gap-[10px] wide:h-[331px] xl:h-full',
         selected ? 'xl:gap-[19px]' : 'xl:gap-[13px]',
       )}
     >
-      {/*
-        Image area — on tablet/mobile it FLEXES to fill the top of the card so every
-        card keeps the same height (Figma: fixed-height card, image absorbs the slack).
-        On desktop it's a fixed 101×137 left column.
-      */}
-      <div className="relative w-full flex-1 min-h-[120px] shrink-0 overflow-clip rounded-[5px] bg-white xl:h-[137px] xl:w-[101px] xl:flex-none xl:min-h-0">
+      <div className="relative h-[115px] w-[88px] shrink-0 overflow-clip rounded-[5px] bg-white sm:h-[130px] sm:w-[96px] md:h-[137px] md:w-[101px]">
         <img
           src={product.image}
           alt={product.name}
@@ -54,8 +49,8 @@ export function ProductCard({ product }: { product: Product }) {
         )}
       </div>
 
-      {/* Details column (natural height — sits at bottom of card) */}
-      <div className="flex flex-col xl:min-w-0 xl:flex-1">
+      {/* Details column */}
+      <div className="flex min-w-0 flex-1 flex-col">
         {/* Name + description + Learn More */}
         <div className="flex flex-col gap-[8px]">
           <h3 className="text-[16px] lg:text-[18px] xl:text-[16px] font-semibold leading-none tracking-[0.6px] text-ink">
@@ -85,8 +80,8 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        {/* Stepper + price — same bottom row as desktop at all card sizes */}
-        <div className="mt-[10px] flex items-end justify-between gap-[10px]">
+        {/* Stepper + price */}
+        <div className="mt-auto flex flex-wrap items-end justify-between gap-x-3 gap-y-2 pt-[10px]">
           <div className="shrink-0">
             <QuantityStepper
               quantity={quantity}
@@ -96,7 +91,7 @@ export function ProductCard({ product }: { product: Product }) {
               label={`${product.name} quantity`}
             />
           </div>
-          <div className="min-w-0">
+          <div className="ml-auto shrink-0">
             <Price
               price={product.price}
               compareAtPrice={product.compareAtPrice}

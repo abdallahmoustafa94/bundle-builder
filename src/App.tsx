@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <BundleProvider catalog={catalog}>
-      <div className="mx-auto max-w-[1213px] px-0 py-6 sm:px-6 sm:py-10 lg:px-0 xl:max-w-[1197px]">
+      <div className="mx-auto max-w-[1213px] px-4 py-6 sm:px-6 sm:py-10 lg:px-0 xl:max-w-[1197px]">
         <div className="grid grid-cols-1 gap-0 md:gap-6 lg:gap-[34px] xl:grid-cols-[768px_399px] xl:gap-[30px]">
           <main className="min-w-0 md:mx-auto md:w-full md:max-w-[900px] wide:max-w-none">
             <Builder />

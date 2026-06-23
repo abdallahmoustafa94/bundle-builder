@@ -91,7 +91,7 @@ export function AccordionStep({ step, open, onToggle, onNext }: AccordionStepPro
         {...(!open ? { inert: '' } : {})}
       >
         <div className="flex flex-col gap-[15px] px-[15px] pb-[20px]">
-          <div className="grid grid-cols-2 items-stretch gap-[15px] md:grid-cols-3 wide:grid-cols-5 xl:grid-cols-2">
+          <div className="grid grid-cols-1 items-stretch gap-[15px] sm:grid-cols-2 md:grid-cols-3 wide:grid-cols-5 xl:grid-cols-2">
             {step.products.map((product, i) => {
               const isLastOdd =
                 step.products.length % 2 === 1 && i === step.products.length - 1;
@@ -100,8 +100,8 @@ export function AccordionStep({ step, open, onToggle, onNext }: AccordionStepPro
                   key={product.id}
                   className={
                     isLastOdd
-                      ? 'col-span-2 mx-auto w-[calc(50%-7.5px)] md:col-span-1 md:mx-0 md:w-auto md:min-w-0 xl:col-span-2 xl:mx-auto xl:w-[calc(50%-7.5px)] xl:min-w-0'
-                      : 'md:min-w-0'
+                      ? 'sm:col-span-2 sm:mx-auto sm:w-[calc(50%-7.5px)] md:col-span-1 md:mx-0 md:w-auto md:min-w-0 xl:col-span-2 xl:mx-auto xl:w-[calc(50%-7.5px)] xl:min-w-0'
+                      : 'min-w-0'
                   }
                 >
                   <ProductCard product={product} />
