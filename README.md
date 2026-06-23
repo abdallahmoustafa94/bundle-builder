@@ -2,7 +2,10 @@
 
 > A multi-step security-system bundle builder with a live review panel — a data-driven React prototype where shoppers assemble a system in a 4-step accordion and see totals update in real time.
 
+**Live demo:** [bundle-builder-sigma.vercel.app](https://bundle-builder-sigma.vercel.app/)
+
 <p align="center">
+  <a href="https://bundle-builder-sigma.vercel.app/"><img src="https://img.shields.io/badge/demo-live-000000?logo=vercel&logoColor=white" alt="Live demo"></a>
   <a href="https://github.com/abdallahmoustafa94/bundle-builder/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/abdallahmoustafa94/bundle-builder/ci.yml?branch=main&label=CI&logo=githubactions&logoColor=white" alt="CI status"></a>
   <img src="https://img.shields.io/badge/node-20-339933?logo=node.js&logoColor=white" alt="Node 20">
   <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React 18">
